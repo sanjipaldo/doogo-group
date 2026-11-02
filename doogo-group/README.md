@@ -74,3 +74,8 @@ doogo-group/
 | 서비스 사이트 주소 | DOOGO MARKET만 연결함 (`doogofood-ops-hub.eugenemoon.chatgpt.site`), 두고클래스·NORA STAY·SNS는 누르면 "주소가 확정되면 연결됩니다" 안내 | `data-pending`이 붙은 링크 |
 | 문의 수신처 | 시안 모드 | `contact.html`의 `data-endpoint` |
 | 개인정보처리방침 | 초안 | `privacy.html` |
+
+## 저장소 · 배포
+- GitHub 저장소 `sanjipaldo/doogo-group` (두고그룹 홈페이지 전용). 2026-11-02까지는 `sanjipaldo/sanjipaldo` 저장소의 `claude/adoring-cori-5etjih` 브랜치였고, 이력은 그대로 옮겨 왔어요.
+- Vercel 프로젝트 `doogo-group` · Root Directory `doogo-group` · 빌드 없음(이 폴더의 파일을 그대로 올림) · Production Branch `main` → www.doogogroup.com
+- `tools/` · `partials/` · `README.md` 는 `.vercelignore` 로 배포에서 빠져요.
