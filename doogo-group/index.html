@@ -329,7 +329,7 @@
   </section>
 
   <!-- =========================================================
-       S3 두고그룹이 운영하는 프로젝트 — 한 카드 = 한 프로젝트(7장) · 각 사이트 첫 화면 캡처
+       S3 두고그룹이 운영하는 프로젝트 — 한 카드 = 한 프로젝트(10장 · 두잉고 → 두고클래스 → 두고푸드 순) · 각 사이트 첫 화면 캡처
        페이지 세로 스크롤은 건드리지 않습니다(고정·가로 스크롤 전환 없음).
        카드 줄은 좌우 슬라이드만: 이전/다음 버튼 · 터치 스와이프 · 마우스 끌기 · 가로 휠 · scroll-snap (home.js · data-gp)
        보이는 카드: 데스크톱 약 2.5장 · 태블릿 1.6장 · 휴대폰 1.1장
@@ -348,23 +348,44 @@
 
     <div class="gp-slider" data-reveal style="--d:.2s">
       <div class="gp-view" data-gp-view>
-        <ol class="gp-list" id="gp-list" aria-label="두고그룹이 운영하는 프로젝트 9개">
-            <li class="gp-item" id="gp-class" data-gp-item>
-              <article class="gp-card" aria-labelledby="gp-class-t">
+        <ol class="gp-list" id="gp-list" aria-label="두고그룹이 운영하는 프로젝트 10개">
+            <li class="gp-item" id="gp-doinggo" data-gp-item>
+              <article class="gp-card" aria-labelledby="gp-doinggo-t">
                 <div class="gp-win">
-                  <div class="gp-win-bar" aria-hidden="true"><span class="gp-dots"><i></i><i></i><i></i></span><span class="gp-url">doogoclass.com</span></div>
-                  <div class="gp-shot"><img src="assets/img/sites/class-2-720.webp" srcset="assets/img/sites/class-2-720.webp 720w, assets/img/sites/class-2.webp 1200w" sizes="(max-width: 760px) 88vw, (max-width: 1024px) 60vw, 560px" width="1200" height="750" alt="DOOGO CLASS 웹사이트(doogoclass.com) 첫 화면" loading="lazy" decoding="async" draggable="false"></div>
+                  <div class="gp-win-bar" aria-hidden="true"><span class="gp-dots"><i></i><i></i><i></i></span><span class="gp-url">doogoclass.com/doinggo</span></div>
+                  <div class="gp-shot"><img src="assets/img/sites/doinggo-720.webp" srcset="assets/img/sites/doinggo-720.webp 720w, assets/img/sites/doinggo.webp 1200w" sizes="(max-width: 760px) 88vw, (max-width: 1024px) 60vw, 560px" width="1200" height="750" alt="DOINGGO 두잉고 웹사이트(doogoclass.com/doinggo) 첫 화면" loading="lazy" decoding="async" draggable="false"></div>
                 </div>
                 <div class="gp-body">
                   <div class="gp-top">
                     <span class="gp-tag"><span class="sr-only">분야 </span>교육업</span>
                     <span class="gp-idx en" aria-hidden="true">01</span>
                   </div>
+                  <h3 class="gp-name en" id="gp-doinggo-t">DOINGGO</h3>
+                  <p class="gp-op"><span class="gp-op-k">운영</span><span class="gp-op-v"><span class="en">DOOGO HOLDINGS</span><span class="gp-op-dot" aria-hidden="true">·</span>교육팀</span></p>
+                  <p class="gp-desc">강사님 이름으로 된 강의 플랫폼에서 기수 운영까지 함께하는 강의 운영 서비스입니다.</p>
+                  <div class="gp-btns">
+                    <a class="btn btn--primary gp-btn" href="https://www.doogoclass.com/doinggo" target="_blank" rel="noopener" draggable="false"><span class="sr-only">DOINGGO 두잉고 </span>사이트 바로가기<svg class="ico" aria-hidden="true"><use href="#i-arrow-ur"/></svg><span class="sr-only">(새 창)</span></a>
+                    <a class="btn gp-btn gp-btn--line" href="business-campus.html" draggable="false"><span class="sr-only">DOINGGO 두잉고 </span>사업 보기<svg class="ico ico-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="gp-item" id="gp-class" data-gp-item>
+              <article class="gp-card" aria-labelledby="gp-class-t">
+                <div class="gp-win">
+                  <div class="gp-win-bar" aria-hidden="true"><span class="gp-dots"><i></i><i></i><i></i></span><span class="gp-url">doogoclass.com/vod</span></div>
+                  <div class="gp-shot"><img src="assets/img/sites/class-3-720.webp" srcset="assets/img/sites/class-3-720.webp 720w, assets/img/sites/class-3.webp 1200w" sizes="(max-width: 760px) 88vw, (max-width: 1024px) 60vw, 560px" width="1200" height="750" alt="DOOGO CLASS 웹사이트(doogoclass.com/vod) 첫 화면" loading="lazy" decoding="async" draggable="false"></div>
+                </div>
+                <div class="gp-body">
+                  <div class="gp-top">
+                    <span class="gp-tag"><span class="sr-only">분야 </span>교육업</span>
+                    <span class="gp-idx en" aria-hidden="true">02</span>
+                  </div>
                   <h3 class="gp-name en" id="gp-class-t">DOOGO CLASS</h3>
                   <p class="gp-op"><span class="gp-op-k">운영</span><span class="gp-op-v"><span class="en">DOOGO HOLDINGS</span><span class="gp-op-dot" aria-hidden="true">·</span>교육팀</span></p>
                   <p class="gp-desc">실무자의 경험과 노하우를 나누는 온라인 클래스입니다.</p>
                   <div class="gp-btns">
-                    <a class="btn btn--primary gp-btn" href="https://www.doogoclass.com" target="_blank" rel="noopener" draggable="false"><span class="sr-only">DOOGO CLASS </span>사이트 바로가기<svg class="ico" aria-hidden="true"><use href="#i-arrow-ur"/></svg><span class="sr-only">(새 창)</span></a>
+                    <a class="btn btn--primary gp-btn" href="https://www.doogoclass.com/vod" target="_blank" rel="noopener" draggable="false"><span class="sr-only">DOOGO CLASS </span>사이트 바로가기<svg class="ico" aria-hidden="true"><use href="#i-arrow-ur"/></svg><span class="sr-only">(새 창)</span></a>
                     <a class="btn gp-btn gp-btn--line" href="business-campus.html" draggable="false"><span class="sr-only">DOOGO CLASS </span>사업 보기<svg class="ico ico-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
                   </div>
                 </div>
@@ -379,7 +400,7 @@
                 <div class="gp-body">
                   <div class="gp-top">
                     <span class="gp-tag"><span class="sr-only">분야 </span>유통</span>
-                    <span class="gp-idx en" aria-hidden="true">02</span>
+                    <span class="gp-idx en" aria-hidden="true">03</span>
                   </div>
                   <h3 class="gp-name en" id="gp-food-t">DOOGOFOOD</h3>
                   <p class="gp-op"><span class="gp-op-k">운영</span><span class="gp-op-v"><span class="en">DOOGO HOLDINGS</span><span class="gp-op-dot" aria-hidden="true">·</span>유통팀</span></p>
@@ -400,7 +421,7 @@
                 <div class="gp-body">
                   <div class="gp-top">
                     <span class="gp-tag"><span class="sr-only">분야 </span>공간 &amp; 라이프스타일</span>
-                    <span class="gp-idx en" aria-hidden="true">03</span>
+                    <span class="gp-idx en" aria-hidden="true">04</span>
                   </div>
                   <h3 class="gp-name en" id="gp-nora-t">NORA STAY</h3>
                   <p class="gp-op"><span class="gp-op-k">운영</span><span class="gp-op-v"><span class="en">DOOGO SPACE</span><span class="gp-op-dot" aria-hidden="true">·</span>공간팀</span></p>
@@ -421,7 +442,7 @@
                 <div class="gp-body">
                   <div class="gp-top">
                     <span class="gp-tag"><span class="sr-only">분야 </span>미디어 &amp; 콘텐츠</span>
-                    <span class="gp-idx en" aria-hidden="true">04</span>
+                    <span class="gp-idx en" aria-hidden="true">05</span>
                   </div>
                   <h3 class="gp-name gp-name--ko" id="gp-yt-t">두고보는 문대표<span class="gp-name-sub en">YouTube</span></h3>
                   <p class="gp-op"><span class="gp-op-k">운영</span><span class="gp-op-v"><span class="en">DOOGO MEDIA</span><span class="gp-op-dot" aria-hidden="true">·</span>미디어팀</span></p>
@@ -442,7 +463,7 @@
                 <div class="gp-body">
                   <div class="gp-top">
                     <span class="gp-tag"><span class="sr-only">분야 </span>브랜드 커머스</span>
-                    <span class="gp-idx en" aria-hidden="true">05</span>
+                    <span class="gp-idx en" aria-hidden="true">06</span>
                   </div>
                   <h3 class="gp-name en" id="gp-onedaycore-t">ONEDAYCORE</h3>
                   <p class="gp-op"><span class="gp-op-k">운영</span><span class="gp-op-v"><span class="en">DOOGO MAKERS</span><span class="gp-op-dot" aria-hidden="true">·</span>브랜드팀</span></p>
@@ -463,7 +484,7 @@
                 <div class="gp-body">
                   <div class="gp-top">
                     <span class="gp-tag"><span class="sr-only">분야 </span>마케팅</span>
-                    <span class="gp-idx en" aria-hidden="true">06</span>
+                    <span class="gp-idx en" aria-hidden="true">07</span>
                   </div>
                   <h3 class="gp-name en" id="gp-ad-t">DOOGO AD</h3>
                   <p class="gp-op"><span class="gp-op-k">운영</span><span class="gp-op-v"><span class="en">DOOGO AD</span><span class="gp-op-dot" aria-hidden="true">·</span>마케팅팀</span></p>
@@ -484,7 +505,7 @@
                 <div class="gp-body">
                   <div class="gp-top">
                     <span class="gp-tag"><span class="sr-only">분야 </span>마케팅</span>
-                    <span class="gp-idx en" aria-hidden="true">07</span>
+                    <span class="gp-idx en" aria-hidden="true">08</span>
                   </div>
                   <h3 class="gp-name en" id="gp-reviewhub-t">REVIEW HUB</h3>
                   <p class="gp-op"><span class="gp-op-k">운영</span><span class="gp-op-v"><span class="en">DOOGO AD</span><span class="gp-op-dot" aria-hidden="true">·</span>마케팅팀</span></p>
@@ -505,7 +526,7 @@
                 <div class="gp-body">
                   <div class="gp-top">
                     <span class="gp-tag"><span class="sr-only">분야 </span>제조업</span>
-                    <span class="gp-idx en" aria-hidden="true">08</span>
+                    <span class="gp-idx en" aria-hidden="true">09</span>
                   </div>
                   <h3 class="gp-name en" id="gp-bio-t">DOOGOBIO</h3>
                   <p class="gp-op"><span class="gp-op-k">운영</span><span class="gp-op-v"><span class="en">DOOGOBIO</span><span class="gp-op-dot" aria-hidden="true">·</span>제조팀<span class="gp-op-loc">뉴질랜드</span></span></p>
@@ -526,7 +547,7 @@
                 <div class="gp-body">
                   <div class="gp-top">
                     <span class="gp-tag"><span class="sr-only">분야 </span>제조업</span>
-                    <span class="gp-idx en" aria-hidden="true">09</span>
+                    <span class="gp-idx en" aria-hidden="true">10</span>
                   </div>
                   <h3 class="gp-name en" id="gp-connect-t">DOOGO CONNECT</h3>
                   <p class="gp-op"><span class="gp-op-k">운영</span><span class="gp-op-v"><span class="en">DOOGOBIO</span><span class="gp-op-dot" aria-hidden="true">·</span>제조팀<span class="gp-op-loc">뉴질랜드</span></span></p>
@@ -541,7 +562,7 @@
         </ol>
       </div>
       <div class="container gp-foot">
-        <p class="gp-count en" aria-hidden="true"><b data-gp-num>01</b><span>/ 09</span></p>
+        <p class="gp-count en" aria-hidden="true"><b data-gp-num>01</b><span>/ 10</span></p>
         <span class="gp-bar" aria-hidden="true"><i data-gp-bar></i></span>
         <p class="gp-note">각 사이트 첫 화면 · 2026년 10월 기준</p>
         <div class="gp-nav">
@@ -1254,6 +1275,6 @@
 <!-- @footer:end -->
 <script src="assets/js/site.js?v=f52876db" defer></script>
 <script src="assets/js/people-rail.js?v=68e272b6" defer></script>
-<script src="assets/js/pages/home.js?v=e84413a9" defer></script>
+<script src="assets/js/pages/home.js?v=65e46ce0" defer></script>
 </body>
 </html>
