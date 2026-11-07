@@ -14,7 +14,7 @@
    - 그룹 구성(3차 확정): 지주회사 DOOGO HOLDINGS가 교육(DOOGO CLASS)과 유통(DOOGOFOOD)을 직접 운영하고,
      그룹사 5곳(DOOGO SPACE 공간 & 라이프스타일 · DOOGO MEDIA 미디어 & 콘텐츠 · DOOGO MAKERS 브랜드 커머스 · DOOGO AD 마케팅 · DOOGOBIO NZ 뉴질랜드 건강식품 제조)이
      나머지 사업을 맡습니다. 사업별 운영 회사·리더는 BIZ[].corp (화면의 회사·브랜드 이름은 모두 영문 표기)
-     리더 직함은 corp.title — DOOGO MEDIA 김윤정 · DOOGO MAKERS 신동훈은 '총괄이사' (나머지는 기본 직함 '대표이사')
+     리더 직함은 corp.title — DOOGO MEDIA 김윤정은 '총괄이사' (나머지는 기본 직함 '대표이사')
      (title이 없으면 기본 직함 · 화면의 직함은 모두 ttl(corp)로 씁니다)
    - 사업 분야 이름(6차 확정): 교육업 · 제조업 · 브랜드 커머스 · 미디어 & 콘텐츠 · 마케팅 · 유통 · 공간 & 라이프스타일 (BIZ[].area — HTML 문구라 &는 &amp;로 씀)
      그룹사 분야 라벨(corp.field)이 사업 분야 이름과 같으면 운영 회사 칩에서 분야를 다시 쓰지 않습니다(corpChip).
@@ -113,7 +113,7 @@ const LEADER_CAREER = {
   space: ['[現] NORA STAY 대표이사', '[現] DOOGO SPACE 대표이사', '[現] 문득 F&amp;B 대표이사'], // 문성오
   media: ['[現] (주) 하이비주얼 대표이사', '[現] 라온프로덕션 대표', '[現] 국가무형유산 이수자'], // 김윤정
   'media-park': ['[現] 모아이프로덕션 대표이사', '[前] 영화 두바퀴자전거 감독', '[前] 용인대 회화학과 졸업'], // 박영균 (corp.also)
-  makers: ['건국대학교 경제학과 졸업', '[現] 마우리엔젯 B 총괄이사', '[現] 신나용 대표이사'], // 신동훈
+  makers: ['[現] 두고메이커스 대표이사', '[現] Onedaycore Canada 영업이사', '[前] Natural Life Canada 세일즈파트'], // 최재인
 };
 const PHOTO = {
   campus: { w: 1280, h: 950, alt: '밝은 강의실에서 강사가 성인 수강생들 앞에서 강의하는 모습' },
@@ -234,7 +234,7 @@ const BIZ = [
   },
   {
     slug: 'commerce', num: '03', area: '브랜드 커머스', en: 'DOOGO MAKERS', chain: 'Brand', icon: 'i-commerce',
-    corp: { en: 'DOOGO MAKERS', field: '브랜드 커머스', ceo: '신동훈', title: '총괄이사', key: 'makers', photo: 'leader-shin-donghoon', off: true }, // off: 새 담당자 확정 전까지 이름 · 사진 · '이끄는 사람' 칸 비공개
+    corp: { en: 'DOOGO MAKERS', field: '브랜드 커머스', ceo: '최재인', key: 'makers', photo: 'leader-choi-jaein' },
     scope: '세일즈·영업 · 브랜드 기획 · 상품 운영 · EXIT 전략',
     defLabel: '브랜드 기획 · 운영', def: '브랜드를 만들고 성장시키며, EXIT까지 연결합니다.',
     role: '브랜드를 기획하고 운영하며, 판매와 성장 전략을 함께 만듭니다.',
@@ -654,7 +654,7 @@ function buildList() {
               <span class="bz-count en" aria-hidden="true">${b.num} / ${String(BIZ.length).padStart(2, '0')}</span>
             </div>
             <h3 class="bz-title" id="bz-t-${b.slug}"><span class="bz-area">${b.area}</span><span class="bz-brand en">${b.en}</span></h3>
-            <p class="bz-corp"><span class="bz-corp-k">운영</span><strong class="bz-corp-n en">${b.corp.en}</strong>${corpChip(b.corp, b.area) ? `<span class="bz-corp-type${b.corp.direct ? ' is-hold' : ''}">${corpChip(b.corp, b.area)}</span>` : ''}${b.corp.off ? '' : `<span class="bz-corp-ceo">${ttl(b.corp)} <strong>${b.corp.ceo}</strong></span>`}${b.corp.also ? `<span class="bz-corp-ceo">${b.corp.also.title} <strong>${b.corp.also.ceo}</strong></span>` : ''}</p>
+            <p class="bz-corp"><span class="bz-corp-k">운영</span><strong class="bz-corp-n en">${b.corp.en}</strong>${corpChip(b.corp, b.area) ? `<span class="bz-corp-type${b.corp.direct ? ' is-hold' : ''}">${corpChip(b.corp, b.area)}</span>` : ''}<span class="bz-corp-ceo">${ttl(b.corp)} <strong>${b.corp.ceo}</strong></span>${b.corp.also ? `<span class="bz-corp-ceo">${b.corp.also.title} <strong>${b.corp.also.ceo}</strong></span>` : ''}</p>
             <p class="bz-def"><span class="bz-def-label">${b.defLabel}</span>${nw(b.def)}</p>
             <div class="bz-svc-box">
               <p class="bz-label">주요 서비스</p>
@@ -1185,7 +1185,7 @@ ${b.facts.map(([k, v]) => `        <div><dt>${k}</dt><dd>${nw(v)}</dd></div>`).j
   </section>
 
   <nav class="subnav dt-subnav" aria-label="${b.area} 페이지 안 바로가기">
-    <div class="container"><ul><li><a href="#services">주요 서비스</a></li><li><a href="#site">${b.web.title}</a></li><li><a href="#scene">현장</a></li><li><a href="#related">${b.relNav}</a></li>${c.off ? '' : `<li><a href="#leader">담당 ${ttl(c)}</a></li>`}<li><a href="#inquiry">문의</a></li></ul></div>
+    <div class="container"><ul><li><a href="#services">주요 서비스</a></li><li><a href="#site">${b.web.title}</a></li><li><a href="#scene">현장</a></li><li><a href="#related">${b.relNav}</a></li><li><a href="#leader">담당 ${ttl(c)}</a></li><li><a href="#inquiry">문의</a></li></ul></div>
   </nav>
 
   <!-- 2. 주요 서비스 -->
@@ -1253,7 +1253,7 @@ ${REL[b.slug]()}
     </div>
   </section>
 
-  ${c.off ? '<!-- 6. 담당 리더: 새 담당자 확정 전까지 비공개 (corp.off) -->' : `<!-- 6. 담당 리더 -->
+  <!-- 6. 담당 리더 -->
   <section class="section dt-leader" id="leader" aria-labelledby="leader-title">
     <div class="container dt-leader-grid">
       <div class="dt-leader-head">
@@ -1269,7 +1269,7 @@ ${REL[b.slug]()}
         </div>
       </article>${alsoCard}${a ? '\n      </div>' : ''}
     </div>
-  </section>`}
+  </section>
 
   <!-- 7. 마무리: 문의 · 이전/다음 · 다른 사업 -->
   <section class="section section--ivory dt-close" id="inquiry" aria-labelledby="ask-title">
@@ -1320,7 +1320,7 @@ ${bizBand(b)}`;
   return shell({
     title: `${b.area} · ${b.en}`,
     // 회사 이름은 한 번만: 직접 운영 사업은 '운영 회사 직접 운영', 그룹사 사업은 회사 이름이 곧 브랜드라 생략
-    desc: `${b.en} — 두고그룹 ${b.area} 분야${c.off ? '' : ` (${c.direct ? `${c.en} · ` : ''}${ttl(c)} ${c.ceo}${c.also ? ` · ${c.also.title} ${c.also.ceo}` : ''})`}. ${b.role} ${b.def}`,
+    desc: `${b.en} — 두고그룹 ${b.area} 분야 (${c.direct ? `${c.en} · ` : ''}${ttl(c)} ${c.ceo}${c.also ? ` · ${c.also.title} ${c.also.ceo}` : ''}). ${b.role} ${b.def}`,
     css: 'business-detail', js: 'business-detail',
     bodyAttrs: `data-page="business-${b.slug}"`,
     main,

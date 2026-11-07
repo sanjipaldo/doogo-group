@@ -957,9 +957,6 @@ html.soft-motion .ab-chain-scene { --tx: 0deg !important; --ty: 0deg !important;
 .ab-oc-av { position: relative; flex: none; display: block; width: 76px; height: 76px; border-radius: 50%; overflow: hidden; background: #fff; box-shadow: 0 0 0 3px rgba(111, 162, 242, .3), 0 14px 28px -10px rgba(0, 0, 0, .65); }
 .ab-oc-av img { position: absolute; left: 50%; top: -6%; width: 158%; max-width: none; height: auto; translate: -50% 0; }
 .ab-oc-av--xl { width: 92px; height: 92px; box-shadow: 0 0 0 4px rgba(255, 255, 255, .28), 0 18px 36px -12px rgba(3, 18, 56, .75); }
-/* 담당자 비공개 회사(DOOGO MAKERS · 새 담당자 확정 전): 사진 대신 회사 아이콘 */
-.ab-oc-av--co { display: grid; place-items: center; color: var(--blue); }
-.ab-oc-av--co svg { width: 44%; height: 44%; }
 .ab-oc-who { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 2px 8px; }
 .ab-oc-who--hold { justify-content: flex-start; margin-top: 8px; }
 .ab-oc-person { font-size: 1.04rem; font-weight: 700; letter-spacing: -.02em; color: #fff; padding-bottom: 1px; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .4s var(--ease); }
