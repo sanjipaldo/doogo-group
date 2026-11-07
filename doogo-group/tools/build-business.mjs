@@ -14,7 +14,7 @@
    - 그룹 구성(3차 확정): 지주회사 DOOGO HOLDINGS가 교육(DOOGO CLASS)과 유통(DOOGOFOOD)을 직접 운영하고,
      그룹사 5곳(DOOGO SPACE 공간 & 라이프스타일 · DOOGO MEDIA 미디어 & 콘텐츠 · DOOGO MAKERS 브랜드 커머스 · DOOGO AD 마케팅 · DOOGOBIO NZ 뉴질랜드 건강식품 제조)이
      나머지 사업을 맡습니다. 사업별 운영 회사·리더는 BIZ[].corp (화면의 회사·브랜드 이름은 모두 영문 표기)
-     리더 직함은 corp.title — DOOGO MEDIA 김윤정은 '총괄이사' (나머지는 기본 직함 '대표이사')
+     리더 직함은 corp.title — 없으면 기본 직함 '대표이사' (함께 이끄는 사람 corp.also 는 also.title)
      (title이 없으면 기본 직함 · 화면의 직함은 모두 ttl(corp)로 씁니다)
    - 사업 분야 이름(6차 확정): 교육업 · 제조업 · 브랜드 커머스 · 미디어 & 콘텐츠 · 마케팅 · 유통 · 공간 & 라이프스타일 (BIZ[].area — HTML 문구라 &는 &amp;로 씀)
      그룹사 분야 라벨(corp.field)이 사업 분야 이름과 같으면 운영 회사 칩에서 분야를 다시 쓰지 않습니다(corpChip).
@@ -266,7 +266,7 @@ const BIZ = [
   },
   {
     slug: 'media', num: '04', area: '미디어 &amp; 콘텐츠', en: 'DOOGO MEDIA', chain: 'Owned Media', icon: 'i-media',
-    corp: { en: 'DOOGO MEDIA', field: '미디어 &amp; 콘텐츠', ceo: '김윤정', title: '총괄이사', key: 'media', photo: 'leader-kim-yunjung',
+    corp: { en: 'DOOGO MEDIA', field: '미디어 &amp; 콘텐츠', ceo: '김윤정', key: 'media', photo: 'leader-kim-yunjung',
       also: { ceo: '박영균', title: '총괄이사', key: 'media-park', photo: 'leader-park-younggyun-2', anchor: 'leader-media-park' } },
     // 8차: DOOGO MEDIA = 온드미디어(브랜드가 직접 소유·운영하는 채널) 전문 — 분야 이름은 '미디어 & 콘텐츠' 그대로, 설명 문구만 온드미디어로
     scope: '온드미디어 촬영 · 유튜브 채널 운영 · 숏폼·라이브 콘텐츠',
