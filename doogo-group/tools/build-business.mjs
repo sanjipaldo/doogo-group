@@ -234,7 +234,7 @@ const BIZ = [
   },
   {
     slug: 'commerce', num: '03', area: '브랜드 커머스', en: 'DOOGO MAKERS', chain: 'Brand', icon: 'i-commerce',
-    corp: { en: 'DOOGO MAKERS', field: '브랜드 커머스', ceo: '최재인', key: 'makers', photo: 'leader-choi-jaein' },
+    corp: { en: 'DOOGO MAKERS', field: '브랜드 커머스', leadField: '브랜드 메이커스', ceo: '최재인', key: 'makers', photo: 'leader-choi-jaein' }, // leadField: 담당자 카드의 분야 줄만 따로
     scope: '세일즈·영업 · 브랜드 기획 · 상품 운영 · EXIT 전략',
     defLabel: '브랜드 기획 · 운영', def: '브랜드를 만들고 성장시키며, EXIT까지 연결합니다.',
     role: '브랜드를 기획하고 운영하며, 판매와 성장 전략을 함께 만듭니다.',
@@ -1102,7 +1102,7 @@ function buildDetail(b, idx) {
   const leaderTag = c.direct ? `<span class="dt-corp-type is-hold">${c.type}</span>` : c.place ? `<span class="dt-corp-type is-place">${c.place}</span>` : '';
   const leaderBody = `<h3 class="pcard-name" id="leader-name">${c.ceo} <small>${ttl(c)}</small></h3>
           <p class="dt-leader-co"><span class="pcard-co en">${c.en}</span>${leaderTag}</p>
-          <p class="pcard-field"><span class="sr-only">분야 </span>${c.field}</p>
+          <p class="pcard-field"><span class="sr-only">분야 </span>${c.leadField || c.field}</p>
 ${c.direct ? `          <blockquote class="dt-leader-quote"><p>“제품과 브랜드, 그리고 사람의 성장이 이어지는 사업을 만듭니다.”</p></blockquote>
 ` : `          <p class="dt-leader-role"><span class="dt-leader-role-k">하는 일</span>${b.role}</p>
 `}          <div class="dt-leader-more">
