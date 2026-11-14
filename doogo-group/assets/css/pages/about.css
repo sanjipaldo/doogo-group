@@ -993,6 +993,9 @@ html.soft-motion .ab-chain-scene { --tx: 0deg !important; --ty: 0deg !important;
 .ab-oc-links { display: grid; grid-template-columns: 1fr 1fr; width: calc(100% + 32px); margin: auto -16px 0; border-top: 1px solid rgba(255, 255, 255, .09); border-radius: 0 0 22px 22px; overflow: hidden; }
 .ab-oc-links a { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 48px; padding: 0 6px; font-size: .82rem; font-weight: 600; color: rgba(255, 255, 255, .86); white-space: nowrap; transition: color .25s var(--ease), background-color .25s var(--ease); }
 .ab-oc-links a + a { border-left: 1px solid rgba(255, 255, 255, .09); }
+/* 링크 세 칸 (DOOGO MEDIA: 유튜브 채널 두 곳 + 사업 보기) */
+.ab-oc-links--3 { grid-template-columns: repeat(3, 1fr); }
+.ab-oc-links--3 a { gap: 4px; padding: 0 4px; font-size: .78rem; }
 .ab-oc-links a:hover { color: #fff; background: rgba(47, 123, 255, .18); }
 .ab-oc-links a:focus-visible { outline-offset: -3px; }
 .ab-oc-links .ico { flex: none; width: 13px; height: 13px; transition: transform .3s var(--ease); }

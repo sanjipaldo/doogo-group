@@ -51,6 +51,7 @@ const AD_URL = 'https://www.doogoad.com/';      // DOOGO AD
 const REVIEW_URL = 'https://www.reviewhub.co.kr/'; // REVIEW HUB 리뷰허브 · 프리미엄 체험단 마케팅 플랫폼 (DOOGO AD 운영)
 const NORA_URL = 'https://www.norastay.com/';   // NORA STAY (DOOGO SPACE 숙박)
 const MEDIA_URL = 'https://www.youtube.com/@%EB%91%90%EA%B3%A0%EB%B3%B4%EB%8A%94%EB%AC%B8%EB%8C%80%ED%91%9C'; // DOOGO MEDIA · YouTube 두고보는 문대표
+const DONMAT_URL = 'https://www.youtube.com/@%EB%8F%88%EB%A7%9B%EC%8A%A4%ED%86%A0%EB%A6%AC'; // DOOGO MEDIA · YouTube 돈맛
 
 /* ---------- 아이콘 ---------- */
 const ico = (id, cls = 'ico') => `<svg class="${cls}" aria-hidden="true"><use href="#${id}"/></svg>`;
@@ -278,13 +279,16 @@ const BIZ = [
     band: '{en}와 브랜드 채널을 시작해 보세요.',
     cta: { label: '콘텐츠 문의하기', href: ASK('media') },
     web: web({ name: 'DOOGO MEDIA', kind: 'YouTube 채널', host: '두고보는 문대표', bar: 'youtube.com/@두고보는문대표', yt: true, url: MEDIA_URL, shot: 'media-yt',
-      btn: '채널 바로가기', close: 'DOOGO MEDIA 채널', desc: 'DOOGO MEDIA가 운영하는 온드미디어 채널, 유튜브 <span class="nowrap">‘두고보는 문대표’</span>입니다. 채널에서 영상 콘텐츠를 볼 수 있습니다.' }),
+      btn: '채널 바로가기', close: 'DOOGO MEDIA 채널', desc: 'DOOGO MEDIA가 운영하는 온드미디어 채널, 유튜브 <span class="nowrap">‘두고보는 문대표’</span>입니다. 채널에서 영상 콘텐츠를 볼 수 있습니다.',
+      moreLabel: 'DOOGO MEDIA가 함께 운영하는 채널',
+      more: [{ name: 'DOOGO MEDIA', kind: 'YouTube 채널', host: '돈맛', yt: true, url: DONMAT_URL, shot: 'media-donmat', close: '돈맛 채널 바로가기',
+        desc: 'DOOGO MEDIA가 운영하는 유튜브 채널 <span class="nowrap">‘돈맛’</span>입니다. 돈 맛 본 사람들의 진짜 이야기를 전합니다.' }] }),
     narration: '브랜드의 채널을, 브랜드의 자산으로.',
     hero: { f: 'media-creator', fx: '50%', fy: '38%', mx: '62%' },
     thumb: 'media-creator', // 21차: 여성 크리에이터 길거리 방송 사진 (새 파일 이름 → 캐시에 남은 옛 사진 대신 바로 새 사진)
     gallery: [photo('media-creator', { label: '온드미디어 촬영', zoom: 1.75, focus: '36% 48%', alt: '짐벌 카메라로 길거리 방송 중인 크리에이터를 촬영하는 모습(확대)' }), render('media', { label: 'DOOGO MEDIA' })],
     heroAlt: { label: '온드미디어 알아보기', href: '#related' },
-    facts: [['대표 서비스', '온드미디어 촬영 · 유튜브 채널 운영'], ['유튜브 채널', SITE(MEDIA_URL, '두고보는 문대표')]],
+    facts: [['대표 서비스', '온드미디어 촬영 · 유튜브 채널 운영'], ['유튜브 채널', SITES(SITE(MEDIA_URL, '두고보는 문대표'), SITE(DONMAT_URL, '돈맛'))]],
     svcHead: 'DOOGO MEDIA가 하는 일',
     svcLead: '브랜드가 직접 소유하는 유튜브·SNS 채널을 기획하고, 촬영과 편집으로 채우고, 꾸준히 운영합니다.',
     detail: [
@@ -1021,10 +1025,10 @@ function webBlock(b) {
           <p class="dt-web-more-label">${nw(w.moreLabel)}</p>
           <ul class="dt-web-subs">
 ${w.more.map(m => `          <li><a class="dt-web-sub" href="${m.url}" target="_blank" rel="noopener">
-            <span class="dt-web-sub-shot"><span class="dt-web-sub-bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/img/sites/${m.shot}-720.webp" alt="${m.name} 웹사이트(${m.host}) 첫 화면" width="720" height="450" loading="lazy" decoding="async"></span>
+            <span class="dt-web-sub-shot"><span class="dt-web-sub-bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="assets/img/sites/${m.shot}-720.webp" alt="${m.name} ${m.yt ? `유튜브 채널(${m.host})` : `웹사이트(${m.host})`} 첫 화면" width="720" height="450" loading="lazy" decoding="async"></span>
             <span class="dt-web-sub-body">
               <span class="dt-web-name"><span class="en">${m.name}</span><span class="dt-web-kind">${m.kind}</span></span>
-              <span class="dt-web-sub-host en">${m.host}</span>
+              <span class="dt-web-sub-host${m.yt ? ' is-ko' : ' en'}">${m.host}</span>
               <span class="dt-web-sub-desc">${nw(m.desc)}</span>
               <span class="dt-web-sub-go">${m.close || '사이트 바로가기'} ${ARROW_UR}${NEWWIN}</span>
             </span>
