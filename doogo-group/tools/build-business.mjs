@@ -97,13 +97,13 @@ const PEOPLE = 'assets/img/people';
 const ttl = (c) => c.title || '대표이사';
 const peopleSrcset = (name) => `${PEOPLE}/${name}-600.webp 600w, ${PEOPLE}/${name}.webp 900w`;
 // 지주회사가 직접 운영하는 사업(교육·유통)의 운영 회사
-const HOLD = { en: 'DOOGO HOLDINGS', type: '지주회사', direct: true, role: '교육 · 그룹 경영 · 투자 및 성장 지원', field: '교육 · 그룹 경영 · 투자 및 성장 지원', ceo: '문원오', photo: 'leader-moon-wonoh', anchor: 'ceo' };
+const HOLD = { en: 'DOOGO HOLDINGS', type: '지주회사', direct: true, role: '교육 · 그룹 경영 · 투자 및 성장 지원', field: '교육 · 그룹 경영 · 투자 및 성장 지원', ceo: '문원오', photo: 'leader-moon-wonoh', anchor: 'ceo', title: '총괄 대표이사 겸 의장' }; // 직함 (2026-11-17 대표님 요청: 대표이사 → 총괄 대표이사 겸 의장)
 
 /* ---------- 이미지 ---------- */
 // 문원오 대표 주요 이력 (23차 · 사용자 확정본, 이 순서 그대로 맨 위에) — leadership.html 의 data-career 와 같게 유지
 const CEO_CAREER = [
   '뉴질랜드 AUT 대학교 비즈니스·마케팅 졸업',
-  '[現] 두고그룹 총괄 대표이사',
+  '[現] 두고그룹 총괄 대표이사 겸 의장',
   '[前] (주) 키위몬 대표이사',
 ];
 // 그룹사 대표 · 총괄이사 주요 이력 (21차 · 사용자 확정본, 이 순서 그대로) — leadership.html 의 data-career 와 같게 유지
@@ -335,7 +335,7 @@ const BIZ = [
   },
   {
     slug: 'food', num: '06', area: '유통', en: 'DOOGOFOOD', chain: 'Sales', icon: 'i-food',
-    corp: HOLD, // DOOGO HOLDINGS 직접 운영 · 담당 대표이사 문원오
+    corp: HOLD, // DOOGO HOLDINGS 직접 운영 · 담당 총괄 대표이사 겸 의장 문원오
     defLabel: '식품 유통', def: '대한민국 농수산물과 건강식품을 연결하여 좋은 먹거리를 전합니다.',
     role: '농수산물과 가공식품, 건강식품의 공급사와 판매자를 연결합니다.',
     services: ['식품 전문 도매 플랫폼 운영', '상품 공급', '판매자 협력'],
@@ -810,7 +810,7 @@ ${PICK_BAND}`;
 const REL = {
   campus: () => {
     const people = [
-      { name: '문대표', sub: ['문원오', 'DOOGO HOLDINGS 대표이사'], course: '뉴질랜드 건기식 브랜딩', len: '5주 과정', photo: 'leader-moon-wonoh' },
+      { name: '문대표', sub: ['문원오', 'DOOGO HOLDINGS 총괄 대표이사 겸 의장'], course: '뉴질랜드 건기식 브랜딩', len: '5주 과정', photo: 'leader-moon-wonoh' },
       { name: '로직메이커', course: '실전 클래스', len: '4주 과정', initial: '로' },
       { name: '황금농부', course: '실전 클래스', len: '4주 과정', initial: '황' },
       { name: '초이', course: '실전 클래스', len: '4주 과정', initial: '초' },
@@ -1100,7 +1100,7 @@ function buildDetail(b, idx) {
         </div>`
     : `<div class="pcard-ph is-empty" aria-hidden="true"><span class="pcard-sil"></span><span class="pcard-soon">사진 준비 중</span></div>`;
   const leaderLead = c.direct
-    ? `지주회사 <span class="nowrap">${c.en}</span>의 대표이사로, ${nw(b.area)} 분야의 <span class="nowrap">${b.en}</span>를 운영하며 그룹 총괄 운영을 이끕니다.`
+    ? `지주회사 <span class="nowrap">${c.en}</span>의 총괄 대표이사 겸 의장으로, ${nw(b.area)} 분야의 <span class="nowrap">${b.en}</span>를 운영하며 그룹 총괄 운영을 이끕니다.`
     : `${nw(b.area)} 분야는 그룹사 <span class="nowrap">${c.en}</span>가 맡고, ${c.ceo} ${ttl(c)}${c.also ? `와 ${c.also.ceo} ${c.also.title}` : ''}가 이끌고 있습니다.`;
   // 회사 줄: 영문 회사명(공통 .pcard-co) + 지주회사 / 해외 거점 칩 — 분야는 그 아래 .pcard-field 한 줄
   const leaderTag = c.direct ? `<span class="dt-corp-type is-hold">${c.type}</span>` : c.place ? `<span class="dt-corp-type is-place">${c.place}</span>` : '';
@@ -1189,7 +1189,7 @@ ${b.facts.map(([k, v]) => `        <div><dt>${k}</dt><dd>${nw(v)}</dd></div>`).j
   </section>
 
   <nav class="subnav dt-subnav" aria-label="${b.area} 페이지 안 바로가기">
-    <div class="container"><ul><li><a href="#services">주요 서비스</a></li><li><a href="#site">${b.web.title}</a></li><li><a href="#scene">현장</a></li><li><a href="#related">${b.relNav}</a></li><li><a href="#leader">담당 ${ttl(c)}</a></li><li><a href="#inquiry">문의</a></li></ul></div>
+    <div class="container"><ul><li><a href="#services">주요 서비스</a></li><li><a href="#site">${b.web.title}</a></li><li><a href="#scene">현장</a></li><li><a href="#related">${b.relNav}</a></li><li><a href="#leader">담당 ${c.direct ? '대표' : ttl(c)}</a></li><li><a href="#inquiry">문의</a></li></ul></div>
   </nav>
 
   <!-- 2. 주요 서비스 -->
