@@ -959,6 +959,7 @@ html.soft-motion .ab-chain-scene { --tx: 0deg !important; --ty: 0deg !important;
 .ab-oc-av--xl { width: 92px; height: 92px; box-shadow: 0 0 0 4px rgba(255, 255, 255, .28), 0 18px 36px -12px rgba(3, 18, 56, .75); }
 .ab-oc-who { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 2px 8px; }
 .ab-oc-who--hold { justify-content: flex-start; margin-top: 8px; }
+.ab-oc-who--hold.ab-oc-who--sub { margin-top: 2px; } /* 지주회사 두 번째 사람 (Group CFO) */
 .ab-oc-person { font-size: 1.04rem; font-weight: 700; letter-spacing: -.02em; color: #fff; padding-bottom: 1px; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .4s var(--ease); }
 .ab-oc-person:hover { background-size: 100% 1px; }
 .ab-oc-role { font-size: .8rem; font-weight: 600; color: var(--blue-300); white-space: nowrap; }
