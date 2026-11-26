@@ -7,7 +7,8 @@
    · 손가락: 브라우저 기본 밀기 (+ 카드 앞에 붙는 scroll-snap · people-rail.css)
    · 트랙패드 가로 스크롤 · ← → 키(줄 안에 포커스가 있을 때 한 장씩) · 아래 가는 진행 막대
    · 같은 사람은 한 번씩만 (복제 없음)
-   · root._prail = { go(k, instant), count } — k 번째 카드가 맨 앞(왼쪽 여백 선)에 오도록
+   · root._prail = { go(k, instant), reveal(k, instant), count } — go: k 번째 카드가 맨 앞(왼쪽 여백 선)에 오도록
+     reveal: 첫 카드(문원오)부터 보이는 처음 자리에서 k 번째 카드가 40% 이상 보이면 처음 자리 그대로, 아니면 go 와 같이 맨 앞으로
    ========================================================= */
 (function () {
   'use strict';
@@ -144,6 +145,13 @@
       count: n,
       go: function (k, instant) {
         var x = targetOf(((k % n) + n) % n);
+        if (instant) { stop(); view.scrollLeft = x; paint(); } else glideTo(x);
+      },
+      reveal: function (k, instant) {
+        k = ((k % n) + n) % n;
+        var r = items[k].getBoundingClientRect(), left = r.left - view.getBoundingClientRect().left + view.scrollLeft; // 처음 자리 기준
+        var shown = Math.min(left + r.width, view.clientWidth) - Math.max(left, 0);
+        var x = shown >= r.width * 0.4 ? 0 : targetOf(k);
         if (instant) { stop(); view.scrollLeft = x; paint(); } else glideTo(x);
       }
     };

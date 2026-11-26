@@ -105,7 +105,8 @@
     }
     function docTop(el) { var y = 0; for (var n = el; n; n = n.offsetParent) y += n.offsetTop; return y; }
     function showCard(k, smooth) {
-      if (rail._prail) rail._prail.go(k, !smooth);
+      // 첫 카드(문원오)부터 보이는 자리에서 그 카드가 보이면 그대로 두고, 뒤쪽 카드일 때만 줄을 넘김 (예: #leader-cfo → 문원오가 맨 앞 그대로)
+      if (rail._prail) (rail._prail.reveal || rail._prail.go)(k, !smooth);
       var hh = parseFloat(getComputedStyle(html).getPropertyValue('--header-h')) || 84;
       var y = Math.max(0, Math.round(docTop(rail) - hh - 24));
       var beh = smooth && !motionOff() ? 'smooth' : 'instant';
